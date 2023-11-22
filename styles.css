@@ -1,15 +1,26 @@
 :root {
-  --overlay: rgba(184, 193, 236, 0.5);
-  --background:#232946;
-  --button: #ff8906;
-  --headline: #fffffe;
-  --paragraph: #b8c1ec;
-  --buttonText: #232946;
-  --stroke: #121629;
-  --main: #b8c1ec;
-  --highlight: #eebbc3;
-  --secondary: #fffffe;
-  --tertiary: #eebbc3;
+    --overlay: rgba(40, 44, 52, 0.9);
+    /* Darker overlay */
+    --background: #121629;
+    /* Dark background */
+    --button: #ff8906;
+    /* Bright accent for buttons */
+    --headline: #eebbc3;
+    /* Light color for headlines */
+    --paragraph: #b8c1ec;
+    /* Slightly lighter text */
+    --buttonText: #232946;
+    /* Dark text for buttons */
+    --stroke: #2d334a;
+    /* Subtle borders and strokes */
+    --main: #b8c1ec;
+    /* Main text color */
+    --highlight: #eebbc3;
+    /* Highlight color */
+    --secondary: #1f2235;
+    /* Secondary background */
+    --tertiary: #eebbc3;
+    /* Tertiary color */
 }
 
 /* CSS Reset */
@@ -23,23 +34,124 @@ body {
 }
 
 /* End of CSS Reset */
-
-body{
+body {
     background-color: var(--background);
     color: var(--paragraph);
-    font-family: 'Robotto-slab', serif;
-}
-
-h1, h2, h3, h4, h5, h6{
-    color: var(--headline);
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-}
-
-main{
+    font-family: 'Roboto Slab', serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    /* Full width */
+    max-width: 1200px;
+    /* Max width for larger screens */
+    padding: 20px;
+    margin: 0 auto;
+    /* Centering the main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--headline);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#dataDisplay {
+    padding: 20px;
+    border: 1px solid var(--stroke);
+    background-color: var(--overlay);
+    margin: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+}
+
+pre {
+    background-color: var(--secondary);
+    color: var(--main);
+    border: 1px solid var(--highlight);
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+#dataDisplay h2 {
+    color: var(--highlight);
+    margin-top: 20px;
+}
+
+/* Styling for scrollbar */
+#dataDisplay::-webkit-scrollbar {
+    width: 8px;
+}
+
+#dataDisplay::-webkit-scrollbar-thumb {
+    background: var(--button);
+    border-radius: 10px;
+}
+
+#dataDisplay::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    #dataDisplay {
+        width: 90%;
+        margin: 10px;
+    }
+
+    h1,
+    h2 {
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 768px) {
+    #dataDisplay {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+
+    h1,
+    h2 {
+        font-size: 1.5em;
+        /* Adjust font size for smaller screens */
+    }
+
+    pre {
+        font-size: 0.9em;
+        /* Smaller font for preformatted text */
+    }
+}
+
+
+/* For Webkit browsers like Chrome and Safari */
+#dataDisplay::-webkit-scrollbar {
+    width: 8px;
+}
+
+#dataDisplay::-webkit-scrollbar-thumb {
+    background: var(--button);
+    border-radius: 10px;
+}
+
+#dataDisplay::-webkit-scrollbar-track {
+    background: var(--background);
 }
