@@ -27,4 +27,19 @@ body {
 body{
     background-color: var(--background);
     color: var(--paragraph);
+    font-family: 'Robotto-slab', serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--headline);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
