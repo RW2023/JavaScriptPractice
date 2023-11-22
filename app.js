@@ -6,6 +6,7 @@ const employees = [
   { name: 'Charlie', age: 22, occupation: 'Student' },
   { name: 'Diana', age: 45, occupation: 'Manager' },
   { name: 'Ethan', age: 30, occupation: 'Developer' },
+  { name: 'Ryan', age: 46, occupation: 'Developer' },
 ];
 
 const names = employees.map((person) => person.name);
