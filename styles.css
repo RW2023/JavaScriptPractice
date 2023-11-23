@@ -141,6 +141,24 @@ pre {
     }
 }
 
+@media (max-width: 480px) {
+    #dataDisplay {
+        width: 100%;
+        /* Full width on smaller screens */
+    }
+
+    h1,
+    h2 {
+        font-size: 2.em;
+        /* Adjust font size for smaller screens */
+    }
+
+    pre {
+        font-size: 1.8em;
+        /* Smaller font for preformatted text */
+    }
+}   
+
 
 /* For Webkit browsers like Chrome and Safari */
 #dataDisplay::-webkit-scrollbar {
