@@ -27,9 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }, {});
 
   // Function to create and append a new HTML element, and return it
-  function appendElement(parent, elementType, content) {
+  function appendElement(parent, elementType, content, className) {
     const element = document.createElement(elementType);
     element.innerHTML = content;
+    if (className) {
+      element.classList.add(className); // Add class if provided
+    }
     parent.appendChild(element);
     return element; // Return the created element
   }
@@ -41,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
       displayElement,
       'div',
       `<b>Name:</b> ${employee.firstName} ${employee.lastName}, <b>Age:</b> ${employee.age}, <b>Occupation:</b> ${employee.occupation}`,
+      'employeeInfo', // Add class to each employee div
     );
-    employeeDiv.classList.add('employeeInfo'); // Add class to each employee div
   });
 
   appendElement(displayElement, 'h2', 'Mid-Age Employees');
@@ -51,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displayElement,
       'div',
       `<b>Name:</b> ${employee.firstName} ${employee.lastName}, <b>Age:</b> ${employee.age}, <b>Occupation:</b> ${employee.occupation}`,
+      'employeeInfo', // Add the same class
     );
   });
 
@@ -60,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displayElement,
       'div',
       `<b>Name:</b> ${employee.firstName} ${employee.lastName}, <b>Age:</b> ${employee.age}, <b>Occupation:</b> ${employee.occupation}`,
+      'employeeInfo', // Add the same class
     );
   });
 
@@ -68,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayElement,
     'div',
     `<b>Name:</b> ${student.firstName} ${student.lastName}, <b>Age:</b> ${student.age}, <b>Occupation:</b> ${student.occupation}`,
+    'employeeInfo', // Add the same class
   );
 
   appendElement(displayElement, 'h2', 'Name to Age Map');
@@ -76,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displayElement,
       'div',
       `<b>Name:</b> ${name}, <b>Age:</b> ${nameToAgeMap[name]}`,
+      'employeeInfo',
     );
   });
 
