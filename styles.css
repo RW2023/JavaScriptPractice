@@ -24,17 +24,12 @@
 }
 
 /* CSS Reset */
-
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     min-height: 100%;
     min-width: 100vh;
-}
-
-/* End of CSS Reset */
-body {
     background-color: var(--background);
     color: var(--paragraph);
     font-family: 'Roboto Slab', serif;
@@ -42,11 +37,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
+
+/* End of CSS Reset */
 
 main {
     width: 100%;
@@ -73,6 +66,10 @@ h6 {
 }
 
 #dataDisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    /* 2x2 layout on medium and large screens */
+    gap: 20px;
     padding: 20px;
     border: 1px solid var(--stroke);
     background-color: var(--overlay);
@@ -82,22 +79,23 @@ h6 {
     max-width: 800px;
 }
 
+@media (max-width: 768px) {
+    #dataDisplay {
+        grid-template-columns: 1fr;
+        /* Stack on small screens */
+    }
+}
+
 pre {
-    /* background-color: var(--secondary); */
     border: 1px solid var(--highlight);
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
 }
 
-
-    code {
-        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);    
+code {
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
-
-/* code.language-javascript {
-    color: #333;
-} */
 
 #dataDisplay h2 {
     color: var(--headline);
@@ -157,7 +155,7 @@ pre {
 
     h1,
     h2 {
-        font-size: 2.em;
+        font-size: 2em;
         /* Adjust font size for smaller screens */
     }
 
@@ -165,19 +163,4 @@ pre {
         font-size: 1.8em;
         /* Smaller font for preformatted text */
     }
-}   
-
-
-/* For Webkit browsers like Chrome and Safari */
-#dataDisplay::-webkit-scrollbar {
-    width: 8px;
-}
-
-#dataDisplay::-webkit-scrollbar-thumb {
-    background: var(--button);
-    border-radius: 10px;
-}
-
-#dataDisplay::-webkit-scrollbar-track {
-    background: var(--background);
 }
