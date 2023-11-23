@@ -32,19 +32,19 @@ document.addEventListener('DOMContentLoaded', () => {
     JSON.stringify(employees, null, 2) +
     '</code></pre>';
 
-  displayElement.innerHTML += '<h2>Junior Employees</h2>';
+  displayElement.innerHTML += '<h2>Young Employees</h2>';
   displayElement.innerHTML +=
     '<pre><code class="language-javascript">' +
     JSON.stringify(junior, null, 2) +
     '</code></pre>';
 
-  displayElement.innerHTML += '<h2>Mid-Level Employees</h2>';
+  displayElement.innerHTML += '<h2>Mid-Age Employees</h2>';
   displayElement.innerHTML +=
     '<pre><code class="language-javascript">' +
     JSON.stringify(midLevel, null, 2) +
     '</code></pre>';
 
-  displayElement.innerHTML += '<h2>Senior Employees</h2>';
+  displayElement.innerHTML += '<h2>Older Employees</h2>';
   displayElement.innerHTML +=
     '<pre><code class="language-javascript">' +
     JSON.stringify(senior, null, 2) +
