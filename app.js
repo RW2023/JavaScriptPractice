@@ -61,4 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
     '<pre><code class="language-javascript">' +
     JSON.stringify(nameToAgeMap, null, 2) +
     '</code></pre>';
+     Prism.highlightAll();
 });
