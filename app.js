@@ -28,25 +28,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
   displayElement.innerHTML = '<h2>All Employees</h2>';
   displayElement.innerHTML +=
-    '<pre>' + JSON.stringify(employees, null, 2) + '</pre>';
+    '<pre><code class="language-javascript">' +
+    JSON.stringify(employees, null, 2) +
+    '</code></pre>';
 
   displayElement.innerHTML += '<h2>Junior Employees</h2>';
   displayElement.innerHTML +=
-    '<pre>' + JSON.stringify(junior, null, 2) + '</pre>';
+    '<pre><code class="language-javascript">' +
+    JSON.stringify(junior, null, 2) +
+    '</code></pre>';
 
   displayElement.innerHTML += '<h2>Mid-Level Employees</h2>';
   displayElement.innerHTML +=
-    '<pre>' + JSON.stringify(midLevel, null, 2) + '</pre>';
+    '<pre><code class="language-javascript">' +
+    JSON.stringify(midLevel, null, 2) +
+    '</code></pre>';
 
   displayElement.innerHTML += '<h2>Senior Employees</h2>';
   displayElement.innerHTML +=
-    '<pre>' + JSON.stringify(senior, null, 2) + '</pre>';
+    '<pre><code class="language-javascript">' +
+    JSON.stringify(senior, null, 2) +
+    '</code></pre>';
 
   displayElement.innerHTML += '<h2>Student</h2>';
   displayElement.innerHTML +=
-    '<pre>' + JSON.stringify(student, null, 2) + '</pre>';
+    '<pre><code class="language-javascript">' +
+    JSON.stringify(student, null, 2) +
+    '</code></pre>';
 
   displayElement.innerHTML += '<h2>Name to Age Map</h2>';
   displayElement.innerHTML +=
-    '<pre>' + JSON.stringify(nameToAgeMap, null, 2) + '</pre>';
+    '<pre><code class="language-javascript">' +
+    JSON.stringify(nameToAgeMap, null, 2) +
+    '</code></pre>';
 });

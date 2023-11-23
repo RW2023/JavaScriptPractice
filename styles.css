@@ -83,12 +83,17 @@ h6 {
 }
 
 pre {
-    background-color: var(--secondary);
-    color: var(--main);
+    /* background-color: var(--secondary); */
     border: 1px solid var(--highlight);
     padding: 15px;
     border-radius: 5px;
     overflow-x: auto;
+}
+
+
+    code {
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 #dataDisplay h2 {
