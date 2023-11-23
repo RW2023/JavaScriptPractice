@@ -5,7 +5,7 @@
     /* Dark background */
     --button: #ff8906;
     /* Bright accent for buttons */
-    --headline: #eebbc3;
+    --headline: #ffffff;
     /* Light color for headlines */
     --paragraph: #b8c1ec;
     /* Slightly lighter text */
@@ -92,7 +92,7 @@ pre {
 }
 
 #dataDisplay h2 {
-    color: var(--highlight);
+    color: var(--headline);
     margin-top: 20px;
 }
 
